@@ -32,7 +32,7 @@ An example of the function:
 ```
 boxplot(3,mito,list(Arthropoda="Arthropoda",Vertebrata=c("Mammalia","Aves"),Nematoda="Nematoda",Platyhelmithes="Platyhelminthes"),TRUE,FALSE)
 ```
-[See output example](https://github.com/AlessandroFormaggioni/stunning-fiesta/blob/main/images_gh/Boxplot1_gh.pdf)
+[See output example](https://github.com/mozoo/almighto/blob/scripts_functions/images_gh/Boxplot1_gh.pdf)
 
 1. The first argument is the number of the **column** where the statistic is placed. Downloading the dataset, the statistics will be ordered as follows:
 
@@ -61,7 +61,7 @@ p4=boxplot(5,mito,list(Arthropoda="Arthropoda",Vertebrata=c("Mammalia","Aves"),N
 plot=grid.arrange(p3,p4, ncol=2, nrow=1)
 ggsave("Boxplots.pdf",plot=plot)
 ```
-[See output example](https://github.com/AlessandroFormaggioni/stunning-fiesta/blob/main/images_gh/Boxplot2_gh.pdf)
+[See output example](https://github.com/mozoo/almighto/blob/scripts_functions/images_gh/Boxplot2_gh.pdf)
 
 ## Correlogram
 A correlogram graphically reports all the pairwise correlations between variables (in our case the 11 statistics). The function calculates the Spearman's ρ between all comparisons. The p-value treshold is corrected with the Bonferroni method. The function is `corr(dataset,clade)`
@@ -69,7 +69,7 @@ Example:
 ```
 corr(mito,"Metazoa")
 ```
-[See output example](https://github.com/AlessandroFormaggioni/stunning-fiesta/blob/main/images_gh/Corrplot_gh.pdf) 
+[See output example](https://github.com/mozoo/almighto/blob/scripts_functions/images_gh/Corrplot_gh.pdf) 
 
 The arguments of the function are the following ones:
 1. The variable that contains the **dataset**
@@ -83,7 +83,7 @@ Example:
 ```
 pca(mito,"Metazoa","phylum",8)
 ```
-[See output example](https://github.com/AlessandroFormaggioni/stunning-fiesta/blob/main/images_gh/PCA1_gh.pdf) <br />
+[See output example](https://github.com/mozoo/almighto/blob/scripts_functions/images_gh/PCA1_gh.pdf) <br />
 The arguments of the function are the following ones:
 1. The whole **dataset**
 
@@ -94,6 +94,6 @@ The arguments of the function are the following ones:
 4. The **number of ellipses** we want to display, deciding to calculate and display the ellipses of the n most numerous clusters. N.B. the ellipses of clusters with few points could fail to be calculated, if the ellipses are not displayed try to reduce the number of them. 
 Inside the function it is also asked if you want to display the correlation circle, if so, you have to provide 4 coordiantes in order to place the correlation circle on the PCA plot (Help yourself with the two axis of the PCA plot to decide the 4 coordinates and find a blank spot). <br />
 
-[See output example](https://github.com/AlessandroFormaggioni/stunning-fiesta/blob/main/images_gh/PCA2_gh.pdf)
+[See output example](https://github.com/mozoo/almighto/blob/scripts_functions/images_gh/PCA2_gh.pdf)
 
 These functions do not allow to exploit all the ecological information present in the database but they will be added in the future. If you need to obtain these plots divided by ecological features, feel free to contact the author (ale.formaggioni@gmail.com), as well as for any question, concern or advice.
